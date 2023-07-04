@@ -3,11 +3,11 @@ import { Plugin } from "vite";
 import { setupMockPlugin } from "./mock";
 export default function setupPlugins(
   isBuild: boolean,
-  env: Record<string, any>
+  env: ViteEnv
 ) {
+
   const plugins: Plugin[] = [vue()];
   plugins.push(setupMockPlugin(isBuild));
   return plugins;
 }
-
 

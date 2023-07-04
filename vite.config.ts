@@ -15,7 +15,6 @@ export default ({ command, mode }: ConfigEnv) => {
   const isBuild = command === "build";
   const root = process.cwd();
   const env = parseEnv(loadEnv(mode, root));
-
   return {
     // plugins: [vue()],
     plugins: setupPlugins(isBuild, env),
