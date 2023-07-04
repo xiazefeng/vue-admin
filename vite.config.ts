@@ -15,11 +15,13 @@ export default ({ command, mode }: ConfigEnv) => {
   const isBuild = command === "build";
   const root = process.cwd();
   const env = parseEnv(loadEnv(mode, root));
+  console.log(mode)
   return {
     // plugins: [vue()],
     plugins: setupPlugins(isBuild, env),
     resolve: {
       alias,
     },
+    base: mode === 'production' ? '/vue-admin/' : '/',
   };
 };
