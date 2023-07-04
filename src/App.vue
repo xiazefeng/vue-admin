@@ -7,4 +7,5 @@ console.log(import.meta.env.VITE_API_URL)
 
 <style lang="scss" scoped>
 
+
 </style>
